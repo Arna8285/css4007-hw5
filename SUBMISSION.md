@@ -186,6 +186,13 @@ User preferences database: data/user_preferences.sqlite
 The SQLite databases are not uploaded to GitHub.
 They can be recreated when the program starts.
 
+| Situation | Command used | Log file | What happened |
+|---|---|---|---|
+| Refer to an earlier message | `graph.invoke()` with the same `thread_id` | `outputs/S10_conversation_memory.json` | The agent remembered the previous Wi-Fi problem. |
+| Close, restart and resume | `create_memory_agent()` and `graph.get_state()` | `outputs/S11_memory_persistence.json` | A new agent instance restored 8 messages from SQLite. |
+| Same user, new conversation | `graph.invoke()` with a new `thread_id` | `outputs/S12_preference_across_threads.json` | Student 001 received simple English instructions using the saved A2 preference. |
+| Different user | `graph.invoke()` with `user_id="student_002"` | `outputs/S13_user_memory_isolation.json` | Student 002 received a Russian answer. User preferences remained separate. |
+
 ## Part 4 — Running and checking my work
 
 ### Environment
@@ -289,14 +296,3 @@ The project is a learning prototype, not a production system.
 | S12 — Preference across threads without replay | Saved execution | outputs/S12_preference_across_threads.json | Agent used saved A2 English preference in a new thread. |
 | S13 — Do not share memory between users | Saved execution | outputs/S13_user_memory_isolation.json | Users had separate preferences; student_002 received a Russian answer. |
 | S14 — Password recovery outage | Saved execution | outputs/S14_password_outage.json | Agent detected password recovery outage. |
-
-
-### Part 3 — Memory Test Results
-
-| Situation | Command used | Log file | What happened |
-|---|---|---|---|
-| Refer to an earlier message | `graph.invoke()` with the same `thread_id` | `outputs/S10_conversation_memory.json` | The agent remembered the previous Wi-Fi problem. |
-| Close, restart and resume | `create_memory_agent()` and `graph.get_state()` | `outputs/S11_memory_persistence.json` | A new agent instance restored 8 messages from SQLite. |
-| Same user, new conversation | `graph.invoke()` with a new `thread_id` | `outputs/S12_preference_across_threads.json` | Student 001 received simple English instructions using the saved A2 preference. |
-| Different user | `graph.invoke()` with `user_id="student_002"` | `outputs/S13_user_memory_isolation.json` | Student 002 received a Russian answer. User preferences remained separate. |
-
