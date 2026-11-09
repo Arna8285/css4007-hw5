@@ -301,3 +301,17 @@ The project is a learning prototype, not a production system.
 | S12 — Preference across threads without replay | Saved execution | outputs/S12_preference_across_threads.json | Agent used saved A2 English preference in a new thread. |
 | S13 — Do not share memory between users | Saved execution | outputs/S13_user_memory_isolation.json | Users had separate preferences; student_002 received a Russian answer. |
 | S14 — Password recovery outage | Saved execution | outputs/S14_password_outage.json | Agent detected password recovery outage. |
+
+
+
+## Final Observations
+
+In this homework, I learned how to build a helpdesk agent using LangGraph.
+
+In Part 1, I used fixed Python rules to route user requests. In Part 2, I added an OpenAI model and tools to handle different problems. In Part 3, I used SQLite to save conversation history and user preferences.
+
+I also learned how to test my project using pytest and GitHub Actions. All 9 local automated tests passed successfully.
+
+The main limitation is that the helpdesk uses simulated data and does not submit real tickets.
+
+Overall, this project helped me understand how routing, tools, memory, and testing work together in an AI agent.
