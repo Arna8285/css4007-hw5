@@ -1,13 +1,25 @@
-.venv/
-__pycache__/
-.pytest_cache/
+# Секретные данные
 .env
 .env.*
 !.env.example
-*.db
+*.key
+
+# Виртуальное окружение
+.venv/
+venv/
+
+# Временные файлы Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Локальные базы данных
 *.sqlite
 *.sqlite3
-*.db-*
-*.sqlite-*
-*.sqlite3-*
-local-storage/
+*.sqlite-shm
+*.sqlite-wal
+
+# Системные файлы
+.DS_Store
+Thumbs.db

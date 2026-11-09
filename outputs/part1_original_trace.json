@@ -1,0 +1,130 @@
+[
+  {
+    "message": "I cannot connect to Wi-Fi.",
+    "trace": [
+      {
+        "node": "read_request",
+        "update": {
+          "category": "wifi"
+        },
+        "state_after": {
+          "message": "I cannot connect to Wi-Fi.",
+          "category": "wifi",
+          "reply": ""
+        }
+      },
+      {
+        "node": "wifi_help",
+        "update": {
+          "reply": "Connect to the practice campus network\nCheck that Wi-Fi is enabled and airplane mode is off.\nSelect the fictional Campus-Demo network.\nIf connection fails, forget the saved network and try connecting again.\nIf the problem remains, check the service status before preparing a ticket."
+        },
+        "state_after": {
+          "message": "I cannot connect to Wi-Fi.",
+          "category": "wifi",
+          "reply": "Connect to the practice campus network\nCheck that Wi-Fi is enabled and airplane mode is off.\nSelect the fictional Campus-Demo network.\nIf connection fails, forget the saved network and try connecting again.\nIf the problem remains, check the service status before preparing a ticket."
+        }
+      }
+    ],
+    "final_state": {
+      "message": "I cannot connect to Wi-Fi.",
+      "category": "wifi",
+      "reply": "Connect to the practice campus network\nCheck that Wi-Fi is enabled and airplane mode is off.\nSelect the fictional Campus-Demo network.\nIf connection fails, forget the saved network and try connecting again.\nIf the problem remains, check the service status before preparing a ticket."
+    }
+  },
+  {
+    "message": "I forgot my PASSWORD.",
+    "trace": [
+      {
+        "node": "read_request",
+        "update": {
+          "category": "password"
+        },
+        "state_after": {
+          "message": "I forgot my PASSWORD.",
+          "category": "password",
+          "reply": ""
+        }
+      },
+      {
+        "node": "password_help",
+        "update": {
+          "reply": "Recover access to the practice account\nOpen the practice sign-in screen and choose Forgot password.\nFollow the recovery instructions shown by the practice application.\nIf recovery is unavailable, prepare a ticket describing the error.\nNever include a password or recovery code in a ticket."
+        },
+        "state_after": {
+          "message": "I forgot my PASSWORD.",
+          "category": "password",
+          "reply": "Recover access to the practice account\nOpen the practice sign-in screen and choose Forgot password.\nFollow the recovery instructions shown by the practice application.\nIf recovery is unavailable, prepare a ticket describing the error.\nNever include a password or recovery code in a ticket."
+        }
+      }
+    ],
+    "final_state": {
+      "message": "I forgot my PASSWORD.",
+      "category": "password",
+      "reply": "Recover access to the practice account\nOpen the practice sign-in screen and choose Forgot password.\nFollow the recovery instructions shown by the practice application.\nIf recovery is unavailable, prepare a ticket describing the error.\nNever include a password or recovery code in a ticket."
+    }
+  },
+  {
+    "message": "My laptop screen is broken.",
+    "trace": [
+      {
+        "node": "read_request",
+        "update": {
+          "category": "other"
+        },
+        "state_after": {
+          "message": "My laptop screen is broken.",
+          "category": "other",
+          "reply": ""
+        }
+      },
+      {
+        "node": "other_help",
+        "update": {
+          "reply": "Is your problem about Wi-Fi or a password?"
+        },
+        "state_after": {
+          "message": "My laptop screen is broken.",
+          "category": "other",
+          "reply": "Is your problem about Wi-Fi or a password?"
+        }
+      }
+    ],
+    "final_state": {
+      "message": "My laptop screen is broken.",
+      "category": "other",
+      "reply": "Is your problem about Wi-Fi or a password?"
+    }
+  },
+  {
+    "message": "My Wi-Fi password does not work.",
+    "trace": [
+      {
+        "node": "read_request",
+        "update": {
+          "category": "wifi"
+        },
+        "state_after": {
+          "message": "My Wi-Fi password does not work.",
+          "category": "wifi",
+          "reply": ""
+        }
+      },
+      {
+        "node": "wifi_help",
+        "update": {
+          "reply": "Connect to the practice campus network\nCheck that Wi-Fi is enabled and airplane mode is off.\nSelect the fictional Campus-Demo network.\nIf connection fails, forget the saved network and try connecting again.\nIf the problem remains, check the service status before preparing a ticket."
+        },
+        "state_after": {
+          "message": "My Wi-Fi password does not work.",
+          "category": "wifi",
+          "reply": "Connect to the practice campus network\nCheck that Wi-Fi is enabled and airplane mode is off.\nSelect the fictional Campus-Demo network.\nIf connection fails, forget the saved network and try connecting again.\nIf the problem remains, check the service status before preparing a ticket."
+        }
+      }
+    ],
+    "final_state": {
+      "message": "My Wi-Fi password does not work.",
+      "category": "wifi",
+      "reply": "Connect to the practice campus network\nCheck that Wi-Fi is enabled and airplane mode is off.\nSelect the fictional Campus-Demo network.\nIf connection fails, forget the saved network and try connecting again.\nIf the problem remains, check the service status before preparing a ticket."
+    }
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "scenario": "S10",
+  "name": "Conversation Memory",
+  "thread_id": "memory_test_001",
+  "total_messages": 8,
+  "messages": [
+    {
+      "type": "human",
+      "content": "I have a problem with campus Wi-Fi."
+    },
+    {
+      "type": "ai",
+      "content": ""
+    },
+    {
+      "type": "tool",
+      "content": "Connect to the practice campus network\nCheck that Wi-Fi is enabled and airplane mode is off.\nSelect the fictional Campus-Demo network.\nIf connection fails, forget the saved network and try connecting again.\nIf the problem remains, check the service status before preparing a ticket."
+    },
+    {
+      "type": "ai",
+      "content": ""
+    },
+    {
+      "type": "tool",
+      "content": "wifi service status: operational"
+    },
+    {
+      "type": "ai",
+      "content": "Here are the instructions to troubleshoot your campus Wi-Fi issue:\n\n1. **Connect to the practice campus network**.\n2. **Check that Wi-Fi is enabled** and airplane mode is off.\n3. **Select the fictional Campus-Demo network**.\n4. If the connection fails, **forget the saved network** and try connecting again.\n\nSince the Wi-Fi service status is operational, it seems the issue might be on your end. If you continue to experience problems after following these steps, let me know if you would like to prepare a helpdesk ticket for further assistance."
+    },
+    {
+      "type": "human",
+      "content": "What was my previous problem?"
+    },
+    {
+      "type": "ai",
+      "content": "Your previous problem was with campus Wi-Fi. You were experiencing issues connecting to the Wi-Fi network."
+    }
+  ],
+  "passed": true
+}

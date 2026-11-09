@@ -1,0 +1,14 @@
+{
+  "scenario": "S12",
+  "name": "Preference Across Threads",
+  "user_id": "student_001",
+  "thread_id": "s12_new_thread",
+  "saved_preference": {
+    "language": "simple English",
+    "level": "A2"
+  },
+  "user_message": "How can I connect to campus Wi-Fi?",
+  "agent_answer": "To connect to campus Wi-Fi, follow these steps:\n\n1. Make sure Wi-Fi is turned on and airplane mode is off.\n2. Select the \"Campus-Demo\" network.\n3. If it does not connect, forget the saved network and try again.\n4. If you still have problems, check the service status or ask for help.",
+  "observation": "The agent answered in simple English without a new language instruction.",
+  "passed": true
+}

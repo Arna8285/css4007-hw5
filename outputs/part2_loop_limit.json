@@ -1,0 +1,8 @@
+{
+    "test": "Safe loop limit",
+    "max_steps": 5,
+    "actual_steps": 5,
+    "final_response": "The tool limit was reached. I cannot perform additional checks. Please try again with a new request. Any unverified service status is unknown.",
+    "tool_calls": [],
+    "passed": true
+}

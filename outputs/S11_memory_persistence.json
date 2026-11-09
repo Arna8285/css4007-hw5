@@ -1,0 +1,10 @@
+{
+  "scenario": "S11",
+  "name": "Memory Persistence",
+  "thread_id": "memory_test_001",
+  "test_type": "New agent instance with existing SQLite database",
+  "messages_after_recreation": 8,
+  "first_message": "I have a problem with campus Wi-Fi.",
+  "last_message": "Your previous problem was with campus Wi-Fi. You were experiencing issues connecting to the Wi-Fi network.",
+  "passed": true
+}

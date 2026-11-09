@@ -1,0 +1,11 @@
+{
+    "scenario": "S09",
+    "name": "Missing Ticket Details",
+    "tool": "prepare_ticket",
+    "input": {
+        "topic": "wifi",
+        "description": ""
+    },
+    "response": "Please describe your problem before creating a ticket.",
+    "passed": true
+}

@@ -1,0 +1,50 @@
+{
+    "scenario": "S07 - Wi-Fi outage",
+    "service_status": "down",
+    "model": "gpt-4o-mini",
+    "provider": "OpenAI",
+    "model_steps": 2,
+    "messages": [
+        {
+            "type": "human",
+            "content": "I cannot connect to campus Wi-Fi. I already tried reconnecting. Please check the Wi-Fi service status and tell me what to do next."
+        },
+        {
+            "type": "ai",
+            "content": "",
+            "tool_calls": [
+                {
+                    "name": "check_service_status",
+                    "args": {
+                        "service": "Wi-Fi"
+                    },
+                    "id": "call_NPTYpWHRQABoPcpJ6EVY4YCs",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "find_instructions",
+                    "args": {
+                        "topic": "Wi-Fi or password problems"
+                    },
+                    "id": "call_VmUvGfMzVIxX5pwT7eXJoKkq",
+                    "type": "tool_call"
+                }
+            ]
+        },
+        {
+            "type": "tool",
+            "content": "wifi service status: down",
+            "tool_name": "check_service_status"
+        },
+        {
+            "type": "tool",
+            "content": "Connect to the practice campus network\nCheck that Wi-Fi is enabled and airplane mode is off.\nSelect the fictional Campus-Demo network.\nIf connection fails, forget the saved network and try connecting again.\nIf the problem remains, check the service status before preparing a ticket.",
+            "tool_name": "find_instructions"
+        },
+        {
+            "type": "ai",
+            "content": "The Wi-Fi service status is currently down. Here are the steps you can take next:\n\n1. **Connect to the practice campus network**: Ensure that Wi-Fi is enabled and airplane mode is off.\n2. **Select the fictional Campus-Demo network**: Try to connect to this network.\n3. **If connection fails**: Forget the saved network and attempt to connect again.\n4. **If the problem persists**: Since the service is down, you may need to wait until it is restored. \n\nIf you would like, I can help you prepare a helpdesk ticket to report this issue. Would you like to proceed with that?",
+            "tool_calls": []
+        }
+    ]
+}

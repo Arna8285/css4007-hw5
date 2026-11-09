@@ -1,0 +1,16 @@
+{
+  "scenario": "S13",
+  "name": "User Memory Isolation",
+  "student_001_preference": {
+    "language": "simple English",
+    "level": "A2"
+  },
+  "student_002_preference": {
+    "language": "Russian",
+    "level": "B1"
+  },
+  "student_002_question": "How can I reset my university password?",
+  "student_002_answer": "Чтобы сбросить пароль университета, выполните следующие шаги:\n\n1. Откройте экран входа в систему университета.\n2. Выберите опцию \"Забыли пароль?\".\n3. Следуйте инструкциям для восстановления доступа, которые покажет приложение.\n\nЕсли восстановление недоступно, вы можете подготовить заявку в службу поддержки, описав проблему. Не забудьте не включать пароль или код восстановления в заявку.",
+  "observation": "Different user preferences were stored separately. Student 002 received a Russian response.",
+  "passed": true
+}

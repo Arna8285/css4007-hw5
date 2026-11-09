@@ -1,0 +1,56 @@
+{
+    "scenario": "S08 - Status source unavailable",
+    "service_status": "unknown",
+    "model": "gpt-4o-mini",
+    "provider": "OpenAI",
+    "model_steps": 3,
+    "messages": [
+        {
+            "type": "human",
+            "content": "I cannot connect to campus Wi-Fi. Please check the Wi-Fi service status. If the status is unavailable, explain what I should do."
+        },
+        {
+            "type": "ai",
+            "content": "",
+            "tool_calls": [
+                {
+                    "name": "check_service_status",
+                    "args": {
+                        "service": "Wi-Fi"
+                    },
+                    "id": "call_MW9YkZx9uHaC6E6GNRkz4jtj",
+                    "type": "tool_call"
+                }
+            ]
+        },
+        {
+            "type": "tool",
+            "content": "wifi service status: unknown",
+            "tool_name": "check_service_status"
+        },
+        {
+            "type": "ai",
+            "content": "",
+            "tool_calls": [
+                {
+                    "name": "find_instructions",
+                    "args": {
+                        "topic": "Wi-Fi or password problems"
+                    },
+                    "id": "call_UZpvUf6xbSyqlAkEzsrhVMSB",
+                    "type": "tool_call"
+                }
+            ]
+        },
+        {
+            "type": "tool",
+            "content": "Connect to the practice campus network\nCheck that Wi-Fi is enabled and airplane mode is off.\nSelect the fictional Campus-Demo network.\nIf connection fails, forget the saved network and try connecting again.\nIf the problem remains, check the service status before preparing a ticket.",
+            "tool_name": "find_instructions"
+        },
+        {
+            "type": "ai",
+            "content": "The Wi-Fi service status is currently unknown. Here are the steps you can take to troubleshoot your connection:\n\n1. **Connect to the practice campus network**: Ensure you are trying to connect to the correct network.\n2. **Check Wi-Fi settings**:\n   - Make sure Wi-Fi is enabled on your device.\n   - Ensure that airplane mode is turned off.\n3. **Select the Campus-Demo network**: This is the network you should be connecting to.\n4. **If connection fails**:\n   - Forget the saved network and try connecting again.\n5. **If the problem persists**: Since the service status is unknown, you may want to prepare a helpdesk ticket for further assistance.\n\nWould you like me to help you prepare a helpdesk ticket? If so, please provide a brief description of the issue.",
+            "tool_calls": []
+        }
+    ]
+}

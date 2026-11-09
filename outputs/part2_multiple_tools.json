@@ -1,0 +1,62 @@
+{
+    "provider": "OpenAI",
+    "model": "gpt-4o-mini",
+    "model_steps": 2,
+    "messages": [
+        {
+            "type": "human",
+            "content": "I cannot connect to campus Wi-Fi. I already tried reconnecting. Please find the instructions, check the Wi-Fi service status, and prepare a support ticket with this description: 'Campus Wi-Fi connection fails after reconnecting.'"
+        },
+        {
+            "type": "ai",
+            "content": "",
+            "tool_calls": [
+                {
+                    "name": "find_instructions",
+                    "args": {
+                        "topic": "Wi-Fi"
+                    },
+                    "id": "call_RHdROmSCR1nNwrHns3ETikeh",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "check_service_status",
+                    "args": {
+                        "service": "Wi-Fi"
+                    },
+                    "id": "call_wAPnPk6LM8XEytsocgN2S3sv",
+                    "type": "tool_call"
+                },
+                {
+                    "name": "prepare_ticket",
+                    "args": {
+                        "topic": "Wi-Fi",
+                        "description": "Campus Wi-Fi connection fails after reconnecting."
+                    },
+                    "id": "call_DMGSHhzq26z7Bu9bmLS2pwaG",
+                    "type": "tool_call"
+                }
+            ]
+        },
+        {
+            "type": "tool",
+            "content": "Connect to the practice campus network\nCheck that Wi-Fi is enabled and airplane mode is off.\nSelect the fictional Campus-Demo network.\nIf connection fails, forget the saved network and try connecting again.\nIf the problem remains, check the service status before preparing a ticket.",
+            "tool_name": "find_instructions"
+        },
+        {
+            "type": "tool",
+            "content": "Wi-Fi service status: operational",
+            "tool_name": "check_service_status"
+        },
+        {
+            "type": "tool",
+            "content": "Ticket prepared successfully!\nTopic: Wi-Fi\nDescription: Campus Wi-Fi connection fails after reconnecting.\nStatus: draft",
+            "tool_name": "prepare_ticket"
+        },
+        {
+            "type": "ai",
+            "content": "Here are the results for your request:\n\n### Wi-Fi Instructions:\n1. Connect to the practice campus network.\n2. Check that Wi-Fi is enabled and airplane mode is off.\n3. Select the fictional Campus-Demo network.\n4. If the connection fails, forget the saved network and try connecting again.\n5. If the problem remains, check the service status before preparing a ticket.\n\n### Wi-Fi Service Status:\n- The Wi-Fi service status is **operational**.\n\n### Support Ticket:\n- A support ticket has been prepared successfully with the following details:\n  - **Topic:** Wi-Fi\n  - **Description:** Campus Wi-Fi connection fails after reconnecting.\n  - **Status:** Draft\n\nIf you need further assistance or want to submit the ticket, let me know!",
+            "tool_calls": []
+        }
+    ]
+}
