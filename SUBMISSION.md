@@ -7,6 +7,7 @@
 I created a LangGraph helpdesk without an LLM.
 
 Original graph:
+![Original Graph](outputs/part1_original_graph.png)
 
 START → read_request
 - wifi → wifi_help → END
@@ -46,6 +47,7 @@ The original execution traces are saved in outputs/part1_original_trace.json.
 I added a new node called clarify_problem.
 
 Updated graph:
+![Updated Graph](outputs/part1_graph.png)
 
 START → read_request
 - wifi → wifi_help → END
@@ -186,6 +188,8 @@ User preferences database: data/user_preferences.sqlite
 The SQLite databases are not uploaded to GitHub.
 They can be recreated when the program starts.
 
+### Memory Test Results
+
 | Situation | Command used | Log file | What happened |
 |---|---|---|---|
 | Refer to an earlier message | `graph.invoke()` with the same `thread_id` | `outputs/S10_conversation_memory.json` | The agent remembered the previous Wi-Fi problem. |
@@ -240,7 +244,8 @@ The workflow installs Python 3.13 and project dependencies.
 It runs pytest after each push and pull request.
 The workflow also supports manual execution.
 
-GitHub Actions results will be checked after pushing.
+The project was pushed to GitHub.
+The GitHub Actions workflow was triggered.
 
 ### Security
 
@@ -292,7 +297,7 @@ The project is a learning prototype, not a production system.
 | S08 — Status source unavailable | Saved execution | outputs/S08_status_unknown.json | Agent explained that status was unknown. |
 | S09 — Missing ticket details | Saved execution | outputs/S09_missing_details.json | Tool requested missing ticket details. |
 | S10 — Use the current conversation | Saved execution | outputs/S10_conversation_memory.json | Agent recalled the previous Wi-Fi problem. |
-| S11 — Persist and recall after restart | Saved execution | outputs/S11_memory_persistence.json | Conversation restored in a new agent instance. |
+| S11 — Persist and recall after restart | Saved execution | outputs/S11_memory_persistence.json | Conversation restored in a new agent instance using SQLite. |
 | S12 — Preference across threads without replay | Saved execution | outputs/S12_preference_across_threads.json | Agent used saved A2 English preference in a new thread. |
 | S13 — Do not share memory between users | Saved execution | outputs/S13_user_memory_isolation.json | Users had separate preferences; student_002 received a Russian answer. |
 | S14 — Password recovery outage | Saved execution | outputs/S14_password_outage.json | Agent detected password recovery outage. |
